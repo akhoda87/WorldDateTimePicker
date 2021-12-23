@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>date time picker for world !!!</title>
+	<script src="js/vue.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="min-vh-100" >
+<div class="container p-3 " style="min-height: 100% " id="app" dir="rtl">
+	
+	<input type="text" class="form-control" id="dtp"  dir="ltr"  />
+	<input type="text" class="form-control mt-1" id="dtp2" />
+	
+	<p style="">
+	<button type="button" id="lcal" class="btn btn-primary mt-3">
+		Launch calendar
+	</button>
+	
+	</p>
+	
+	
+	<p id="out" class="bg-danger w-100 p-0 mt-3">
+		<dtpicker :objlocal="objlocal" :weekdays="weekdays"  @getdata="getdt" id="calendarWithoutModal" ref="calendarWithoutModal" pattern="yyyy/mm/dd" bgdark="false" closebtn="false" clockbtn="false" calendarbtn="false" todaybtn="false" selectbtn="false" autoclose="true" outputid="dtp2" outputtype="json"  location="fa-IR" timezone="Asia/Tehran" direction="rtl" size="modal-lg"/>
+	</p>
+	<dtpicker id="calendarModal" outputid="dtp"  maker="lcal" />
+	
+	
+	
+</div>
+<script src="js/app.js" type="module"></script>
+	
+</body>
+</html>
